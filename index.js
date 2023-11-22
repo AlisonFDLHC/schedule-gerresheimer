@@ -9,6 +9,6 @@ app.use(cors({credentials: true, origin: true}));
 app.use(express.json());
 app.use(router);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log('Rodando')
 });
