@@ -4,11 +4,11 @@ import cors from 'cors';
 import router from './router/router.js';
 
 const app = express();
-const port = process.env.PORT || 3001
+const PORT = 3001
 app.use(cors({credentials: true, origin: true}));
 app.use(express.json());
 app.use(router);
 
-app.listen(process.env.PORT || port, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log('Rodando')
 });
